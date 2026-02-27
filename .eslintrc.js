@@ -24,6 +24,7 @@ module.exports = {
   ignorePatterns: [
     '/lib/**/*', // Ignore built files.
     '/generated/**/*', // Ignore generated files.
+    '.eslintrc.js', // JS config not in tsconfig.
   ],
   plugins: ['@typescript-eslint', 'import', 'unused-imports'],
   rules: {
@@ -52,6 +53,7 @@ module.exports = {
       },
     ],
     'max-params': ['error', 5],
+    'new-cap': ['error', { capIsNewExceptions: ['Router'] }],
     'no-console': 'warn',
     'no-use-before-define': 'warn',
     'no-var': 'error',
