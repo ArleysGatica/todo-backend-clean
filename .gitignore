@@ -10,4 +10,31 @@ node_modules/
 *.local
 *.DS_Store
 
+# Coverage
 /coverage
+
+# Environment variables
+.env
+
+# IDEs
+.cursor
+.vscode
+
+# Firebase
+firebase-debug.log
+firebase-debug.*.log
+
+# Local
+.local
+
+# Logs
+logs/
+*.log
+*.log.*
+*.log.*.*
+*.log.*.*.*
+*.log.*.*.*.*
+*.log.*.*.*.*.*
+*.log.*.*.*.*.*.*
+*.log.*.*.*.*.*.*.*
+*.log.*.*.*.*.*.*.*.*
