@@ -4,7 +4,7 @@ export class User {
     public email: string,
     public password: string,
     public name: string,
-    public createdAt: Date
+    public createdAt: Date,
   ) {}
 
   validatePassword(password: string): boolean {

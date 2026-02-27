@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { createUserHandler } from './handlers/create-user.handler';
 
-const router = Router();
+const RouterController = Router();
 /**
  * @swagger
  * /api/users/register:
@@ -29,6 +29,6 @@ const router = Router();
  *         description: Internal server error
  */
 
-//http://localhost:3000/docs/#/Users/post_api_users_register
-router.post('/register', createUserHandler);
-export default router;
+// http://localhost:3000/docs/#/Users/post_api_users_register
+RouterController.post('/register', createUserHandler);
+export default RouterController;
