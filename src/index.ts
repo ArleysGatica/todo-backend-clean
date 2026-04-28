@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 /**
  * Import function triggers from their respective submodules:
  *
@@ -10,6 +12,7 @@
 import { setGlobalOptions } from 'firebase-functions';
 import { onRequest } from 'firebase-functions/https';
 import * as logger from 'firebase-functions/logger';
+import { processTodoStatusChange } from './functions/process-todo-status-change.function';
 
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
@@ -30,3 +33,6 @@ export const helloWorld = onRequest((request, response) => {
   logger.info('Hello logs!', { structuredData: true });
   response.send('Hello from Firebase!');
 });
+
+// Pub/Sub: procesa cambios de estado de TODO en segundo plano y notifica al finalizar
+export { processTodoStatusChange };
